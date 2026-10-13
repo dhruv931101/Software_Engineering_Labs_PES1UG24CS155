@@ -17,6 +17,6 @@
 Document the system's component structure and justify the selected architectural pattern for the assigned scenario.
 
 ## Student Details
-
+- **NAME:** DHRUV SWATANTRAMATH
 - **SRN:** PES1UG24CS155
 - **Course:** Software Engineering
