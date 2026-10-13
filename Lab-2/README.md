@@ -1,5 +1,6 @@
 # Lab 2 – Jira Hands-on
-
+Name: DHRUV SWATANTRAMATH
+SRN: PES1UG24CS155
 ## Agile Backlog Creation & Sprint Simulations
 
 This lab covers Agile backlog creation and sprint simulation using Jira for a warehouse management scenario.
