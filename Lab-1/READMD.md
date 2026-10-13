@@ -1,8 +1,8 @@
 # Lab 1 – Software Engineering
 # Requirements Engineering & UML Use-Case Modelling
 
-#Name: DHRUV SWATANTRAMATH
-#SRN: PES1UG24CS155
+Name: DHRUV SWATANTRAMATH
+SRN: PES1UG24CS155
 
 ## 1. Overview
 
