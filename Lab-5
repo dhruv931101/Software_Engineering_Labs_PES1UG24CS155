@@ -1,0 +1,14 @@
+
+# Lab 5 — Static Code Analysis
+
+Student: Dhruv Swatantramath  
+SRN: PES1UG24CS155
+
+## Objective
+Improve the Address Book Python program using Pylint, Bandit, and Flake8.
+
+## Results
+- Pylint: 10.00/10
+- Bandit: No issues identified
+- Flake8: No violations
+   
