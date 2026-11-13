@@ -15,7 +15,7 @@ This repository contains Software Engineering lab submissions, including Labs 1 
 - [Lab 3 — Component Modelling & Architectural Pattern Selection](Lab-3/)
 - [Lab 4 — Centipede Repair Lab](Lab-4/)
 - [Lab 5 — Static Code Analysis](Lab-5/)
-- [Lab 6 — Code and Branch Coverage Analysis](Lab%206/)
+- [Lab 6 — Code and Branch Coverage Analysis](Lab-6/)
 
 ## Technologies and Tools
 
