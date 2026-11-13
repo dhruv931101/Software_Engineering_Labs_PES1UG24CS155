@@ -5,7 +5,7 @@ import shutil
 
 from pypdf import PdfReader
 from reportlab.lib import colors
-from reportlab.lib.enums import TA_CENTER, TA_LEFT
+from reportlab.lib.enums import TA_LEFT
 from reportlab.lib.pagesizes import landscape, letter
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch
@@ -161,9 +161,26 @@ def build_report(output_path):
     ]
     functions = [
         [Paragraph("FUNCTION", styles["table_head"]), Paragraph("HYPOTHESIS COVERAGE", styles["table_head"])],
-        [Paragraph("<font name='Courier'>parse_ticket_id</font>", styles["table_body"]), Paragraph("Normalizes valid identifiers; rejects zero year and malformed separators; shared None-type check.", styles["table_body"])],
-        [Paragraph("<font name='Courier'>total_fines</font>", styles["table_body"]), Paragraph("Sums and caps generated non-negative amounts; handles empty input; rejects negative and malformed tokens; shared None-type check.", styles["table_body"])],
-        [Paragraph("<font name='Courier'>speed_excess</font>", styles["table_body"]), Paragraph("Checks integer percentage relation and non-negative output; rejects zero limit, negative speed, malformed readings; shared None-type check.", styles["table_body"])],
+        [Paragraph("<font name='Courier'>parse_ticket_id</font>", styles["table_body"]), Paragraph(
+            "<font name='Courier'>test_parse_ticket_id_returns_normalized_components</font><br/>"
+            "<font name='Courier'>test_parse_ticket_id_rejects_zero_year</font><br/>"
+            "<font name='Courier'>test_parse_ticket_id_rejects_unicode_and_wrong_separators</font><br/>"
+            "<font name='Courier'>test_all_functions_reject_none</font>", styles["table_body"]
+        )],
+        [Paragraph("<font name='Courier'>total_fines</font>", styles["table_body"]), Paragraph(
+            "<font name='Courier'>test_total_fines_sums_nonnegative_amounts_and_caps</font><br/>"
+            "<font name='Courier'>test_total_fines_treats_empty_and_whitespace_as_zero</font><br/>"
+            "<font name='Courier'>test_total_fines_rejects_negative_amounts</font><br/>"
+            "<font name='Courier'>test_total_fines_rejects_unicode_or_malformed_tokens</font><br/>"
+            "<font name='Courier'>test_all_functions_reject_none</font>", styles["table_body"]
+        )],
+        [Paragraph("<font name='Courier'>speed_excess</font>", styles["table_body"]), Paragraph(
+            "<font name='Courier'>test_speed_excess_is_nonnegative_and_matches_integer_percentage</font><br/>"
+            "<font name='Courier'>test_speed_excess_rejects_zero_limit</font><br/>"
+            "<font name='Courier'>test_speed_excess_rejects_negative_speed</font><br/>"
+            "<font name='Courier'>test_speed_excess_rejects_malformed_unicode_readings</font><br/>"
+            "<font name='Courier'>test_all_functions_reject_none</font>", styles["table_body"]
+        )],
     ]
     function_table = Table(functions, colWidths=[1.65 * inch, 8.1 * inch], repeatRows=1)
     function_table.setStyle(TableStyle([
