@@ -26,6 +26,7 @@ This audit separates the requirements in the supplied assignment handout and ros
 | Final Hypothesis suite passes against fixed app and covers all three functions | `test_processor.py`; `screenshots/04_final_passing_tests.png` | Verified | Cleared `LAB7_USE_ORIGINAL`, ran pytest against `processor.py`; all **14 passed**. The output includes properties for each function. |
 | Four required genuine screenshots exist | `screenshots/` | Verified | The four required PNG files exist and were visually checked. The PDF contains one screenshot on each of pages 2–5. |
 | Screenshot aliases in the attached workflow prompt | `screenshots/02_original_failing_tests.png`; `screenshots/04_passing_tests.png` | Verified | Each is a byte-for-byte copy of the corresponding genuine baseline/final test capture listed above, to satisfy both filename sets. |
+| Git preserves PDF and screenshot bytes | `.gitattributes` | Verified | PNG and PDF files are marked binary; SHA-256 of the copied final PDF matches the audited workspace PDF. |
 | Final PDF under the current assignment filename | `PES1UG24CS155_Lab7.pdf` | Verified | Generated from the four captures. pypdf confirmed 5 pages, the required student name/SRN/project/title text, and one embedded screenshot on each evidence page. All five pages were rendered and visually inspected. |
 | Compatibility PDF filename from the original checklist | `PES1UG24CS155_Lab7_FuzzTesting.pdf` | Verified | Updated as a byte-for-byte copy of `PES1UG24CS155_Lab7.pdf`; it contains the same final pages and evidence. |
 | PDF generator | `build_lab7_pdf.py` | Verified | No generator was present during inspection, so this reproducible builder was added. It embeds the four PNGs and checks the PDF page count, identity text, and screenshot count. |
@@ -33,11 +34,11 @@ This audit separates the requirements in the supplied assignment handout and ros
 | README documents setup, commands, test mapping, results, and deliverables | `README.md` | Verified | Reviewed the updated PowerShell instructions and mapped all three functions to test names. It reports only the observed 10/4 baseline and 14-pass final run. |
 | Academic source files are separate and executable | `processor.py`; `test_processor.py` | Verified | Both exist as separate Python files; the app ran and pytest imported and executed the suite. |
 | Labs 1–6 left untouched | `Software_Engineering_Labs_PES1UG24CS155/Lab-1/` through `Lab-6/` | Verified | All edits for this task were kept inside the existing `Lab-7` folder. |
-| Git checkout sync, branch, commit, push, and pull request | Actual checkout named in the user's request | Pending | Academic files above are verified; repo synchronization is tracked separately from the official lab deliverables and must be audited before final completion. |
+| Git checkout sync, branch, commit, push, and pull request | `C:\Users\dhruv\Downloads\Software_Engineering_Labs_PES1UG24CS155\Lab-7`; branch `lab7/fuzz-testing`; [PR #1](https://github.com/dhruv931101/Software_Engineering_Labs_PES1UG24CS155/pull/1) | Verified | The checkout was clean on `main` and had no `Lab-7` directory. Only the new `Lab-7/` was copied; local venv, PDF previews, and caches were excluded. Branch `lab7/fuzz-testing` was pushed. Commit `c347bac20ef736b1fbaed26cb64d3dada8ba6e11` contains the deliverables. PR #1 targeting `main` is open. Labs 1–6 have no staged or committed changes. |
 
 ## Verified result
 
-The application, initial fuzz failures, fixed application, and final passing Hypothesis run have all been executed and captured. The final report contains the four genuine terminal screenshots. The mandatory academic files are present in this exact folder. Git status is marked pending until the separate repository workflow is inspected and completed; Git history is not a substitute for these files.
+The application, initial fuzz failures, fixed application, and final passing Hypothesis run have all been executed and captured. The final report contains the four genuine terminal screenshots. The mandatory academic files are present in this exact folder. The separate Git workflow is also complete; Git history supplements but does not replace these academic files.
 
 ## Reproduction
 
